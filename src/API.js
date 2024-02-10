@@ -7,7 +7,7 @@ const port = 3000;
 const opn = require('opn');
 const fs = require('fs');
 const sqlite3 = require('sqlite3').verbose();
-const db = new sqlite3.Database('src/pessoas.db');
+const db = new sqlite3.Database('pessoas.db');
 const morgan = require('morgan');
 
 function colorize(text, colorCode) {

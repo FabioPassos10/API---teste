@@ -9,7 +9,7 @@ const options = {
             description: 'API para cadastrar, listar, atualizar e excluir pessoas.',
         },
     },
-    apis: ['src/API.js'], 
+    apis: ['API.js'], 
 };
 
 const specs = swaggerJsdoc(options);
