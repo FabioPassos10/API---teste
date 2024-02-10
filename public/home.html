@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Pessoas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #12d79c;
+            /* Cor verde-água */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-top: 0;
+        }
+
+        p {
+            color: #666;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        details {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+
+        .how-to-use {
+            background-color: #12d79c;
+            color: #fff;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .how-to-use h2 {
+            font-size: 18px;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+
+        .btn {
+            background-color: #12d79c;
+            /* Cor verde-água */
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: 2px solid #fff;
+            /* Borda branca */
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s, background-color 0.3s;
+            /* Efeito de transformação e mudança de cor */
+        }
+
+        .btn:hover {
+            background-color: #0aae8f;
+            /* Cor mais escura no hover */
+            transform: scale(1.05);
+            /* Efeito de escala no hover */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>API Pessoas</h1>
+        <p>Uma API para cadastrar, listar, atualizar e excluir pessoas.</p>
+    </header>
+    <div class="container">
+        <section>
+            <h2>Operações Disponíveis</h2>
+            <details>
+                <summary>
+                    ✏️ Cadastrar uma pessoa
+                </summary>
+                <p>Use a operação POST em <code>/pessoa</code> para cadastrar uma pessoa.</p>
+                <p>Exemplo de corpo da requisição:</p>
+                <pre>
+{
+    "nome": "Nome da Pessoa",
+    "idade": 30
+}
+                </pre>
+            </details>
+            <details>
+                <summary>
+                    📝 Atualizar informações de uma pessoa
+                </summary>
+                <p>Use a operação PUT em <code>/pessoa/{id}</code> para atualizar informações de uma pessoa por ID.</p>
+                <p>Exemplo de corpo da requisição:</p>
+                <pre>
+{
+    "nome": "Novo Nome",
+    "idade": 35
+}
+                </pre>
+            </details>
+            <details>
+                <summary>
+                    🗑️ Excluir uma pessoa
+                </summary>
+                <p>Use a operação DELETE em <code>/pessoa/{id}</code> para excluir uma pessoa por ID.</p>
+            </details>
+            <details>
+                <summary>
+                    👦🏽👧🏽 Listar todas as pessoas
+                </summary>
+                <p>Use a operação GET em <code>/pessoas</code> para listar todas as pessoas cadastradas.</p>
+            </details>
+            <details>
+                <summary>
+                    📖 Obter informações de uma pessoa por ID
+                </summary>
+                <p>Use a operação GET em <code>/pessoa/{id}</code> para obter informações de uma pessoa por ID.</p>
+            </details>
+        </section>
+        <section class="how-to-use">
+            <h2>Como Usar</h2>
+            <p>Para mais detalhes sobre como usar as operações, consulte a documentação interativa Swagger: </p>
+            <div class="container">
+                <section class="btn-container">
+                    <!-- Botão que redireciona para "/api-docs" -->
+                    <a class="btn" href="/api-docs" target="_blank">Documentação Swagger</a>
+                </section>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
